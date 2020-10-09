@@ -1,0 +1,9 @@
+Table user
+- use_id : auto incrément
+- use_nom : varchar(100)
+- use_birth : date
+
+Créer le CRUD de la table.
+Utiliser le module "mysql".
+Créer un pool de connexion.
+Vérifier la sécurité des requetês.

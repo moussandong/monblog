@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=titre%></title>
+</head>
+<body>
+    <h1>Bienvenue sur l'annuaire</h1>    
+    <div id="liste">
+        <% for(let i=0; i<data.length; i++) { %>
+            <li><%=data[i].use_nom %> - <%=data[i].use_birth %> - 
+                <a href="/supprimer/<%=data[i].use_id %>">Supprimer</a>
+                <a href="/editer/<%=data[i].use_id %>">Editer</a>
+            </li>
+        <% } %>
+    </div>    
+    <form method="post" action="/ajouter">
+        <label>Nom : </label><input type="text" name="nom">
+        <label>Date de naissance(aaa/mm/jj) : </label><input type="text" name="birth">
+        <input type="submit" value="Ajouter">
+    </form>
+</body>
+</html>

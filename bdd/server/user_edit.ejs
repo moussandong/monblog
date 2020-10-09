@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=titre%></title>
+</head>
+<body>
+    <h1>Edition d'un enregistrement</h1>        
+    <form method="post" action="/sauver">
+        <input type="hidden" name="use_id" value="<%=data[0].use_id %>">
+        <label>Nom : </label><input type="text" name="use_nom" value="">
+        <label>Date de naissance(aaa/mm/jj) : </label><input type="text" name="use_birth" value="">
+        <input type="submit" value="enregistrer">
+    </form>
+</body>
+</html>
